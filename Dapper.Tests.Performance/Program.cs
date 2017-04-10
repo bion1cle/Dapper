@@ -75,7 +75,7 @@ end
         private static async Task RunPerformanceTestsAsync()
         {
             var test = new PerformanceTests();
-            const int iterations = 500;
+            const int iterations = 1000;
             Console.WriteLine("Running {0} iterations that load up a post entity", iterations);
             await test.RunAsync(iterations).ConfigureAwait(false);
         }
