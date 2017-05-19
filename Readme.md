@@ -1,5 +1,6 @@
 Dapper - a simple object mapper for .Net
 ========================================
+[![Build status](https://ci.appveyor.com/api/projects/status/8rbgoxqio76ynj4h?svg=true)](https://ci.appveyor.com/project/StackExchange/dapper)
 
 Release Notes
 -------------
@@ -223,7 +224,7 @@ The performance tests are broken in to 3 lists:
 	</tr>
 </table>
 
-Performance benchmarks are available [here](https://github.com/StackExchange/dapper-dot-net/blob/master/Dapper.Tests/PerformanceTests.cs).
+Performance benchmarks are available [here](https://github.com/StackExchange/Dapper/tree/master/Dapper.Tests.Performance).
 
 Feel free to submit patches that include other ORMs - when running benchmarks, be sure to compile in Release and not attach a debugger (ctrl F5).
 
@@ -315,7 +316,7 @@ post.Owner.Name.IsEqualTo("Sam");
 post.Owner.Id.IsEqualTo(99);
 ```
 
-Dapper is able to split the returned row by making an assumption that your Id columns are named `Id` or `id`, if your primary key is different or you would like to split the wide row at point other than `Id`, use the optional `splitOn` parameter.
+Dapper is able to split the returned row by making an assumption that your Id columns are named `Id` or `id`. If your primary key is different or you would like to split the row at a point other than `Id`, use the optional `splitOn` parameter.
 
 Multiple Results
 ---------------------
@@ -424,16 +425,16 @@ Dapper's simplicity means that many feature that ORMs ship with are stripped out
 
 Will Dapper work with my DB provider?
 ---------------------
-Dapper has no DB specific implementation details, it works across all .NET ADO providers including [SQLite](http://www.sqlite.org/), SQL CE, Firebird, Oracle, MySQL, PostgreSQL and SQL Server.
+Dapper has no DB specific implementation details, it works across all .NET ADO providers including [SQLite](https://www.sqlite.org/), SQL CE, Firebird, Oracle, MySQL, PostgreSQL and SQL Server.
 
 Do you have a comprehensive list of examples?
 ---------------------
-Dapper has a comprehensive test suite in the [test project](https://github.com/StackExchange/dapper-dot-net/blob/master/Dapper.Tests/Tests.cs)
+Dapper has a comprehensive test suite in the [test project](https://github.com/StackExchange/dapper-dot-net/blob/master/Dapper.Tests)
 
 Who is using this?
 ---------------------
 Dapper is in production use at:
 
-[Stack Overflow](http://stackoverflow.com/), [helpdesk](https://www.jitbit.com/web-helpdesk/)
+[Stack Overflow](https://stackoverflow.com/), [helpdesk](https://www.jitbit.com/web-helpdesk/)
 
 (if you would like to be listed here let me know)
